@@ -1,10 +1,10 @@
 #! /bin/sh
 
-modprobe ath10k_usb
-sleep 1
+modprobe ath10k_usb.ko
+sleep 2
 
-ifconfig wlan0 up
-sleep 1
+ip link set wlan0 up
+sleep 2
 
 wpa_supplicant -B -Dnl80211 -iwlan0 -c /etc/wpa_supplicant.conf
 sleep 2
