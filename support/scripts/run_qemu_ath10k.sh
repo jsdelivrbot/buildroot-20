@@ -17,6 +17,8 @@ ${QEMU} \
 	-device usb-host,${USB_DEVICE1}		\
 	-device usb-host,${USB_DEVICE2}		\
 	-enable-kvm							\
-	-append "console=ttyS1"				\
-	-m 1024								\
+	-append "console=ttyS1 nokaslr"		\
+	-m 1536								\
 	-nographic							\
+	-s									\
+	-S
